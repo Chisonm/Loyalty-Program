@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Database\Seeders;
 
+use App\Enums\RequirementType;
 use App\Models\Achievement;
 use Illuminate\Database\Seeder;
 
@@ -20,7 +21,7 @@ final class AchievementSeeder extends Seeder
                 'name' => 'First Purchase',
                 'description' => 'Complete your very first purchase',
                 'icon' => 'Bag',
-                'requirement_type' => 'purchases_count',
+                'requirement_type' => RequirementType::PURCHASES_COUNT->value,
                 'requirement_value' => 1,
             ],
             [
@@ -28,7 +29,7 @@ final class AchievementSeeder extends Seeder
                 'name' => 'Big Spender',
                 'description' => 'Spend ₦10,000 in total',
                 'icon' => 'DollarSign',
-                'requirement_type' => 'total_spent',
+                'requirement_type' => RequirementType::TOTAL_SPENT->value,
                 'requirement_value' => 10000,
             ],
             [
@@ -36,7 +37,7 @@ final class AchievementSeeder extends Seeder
                 'name' => 'Loyal Customer',
                 'description' => 'Make 5 purchases',
                 'icon' => 'Star',
-                'requirement_type' => 'purchases_count',
+                'requirement_type' => RequirementType::PURCHASES_COUNT->value,
                 'requirement_value' => 5,
             ],
             [
@@ -44,7 +45,7 @@ final class AchievementSeeder extends Seeder
                 'name' => 'Premium Shopper',
                 'description' => 'Spend ₦50,000 in total',
                 'icon' => 'Crown',
-                'requirement_type' => 'total_spent',
+                'requirement_type' => RequirementType::TOTAL_SPENT->value,
                 'requirement_value' => 50000,
             ],
         ];

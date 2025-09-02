@@ -4,8 +4,10 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use App\Enums\RequirementType;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use PHPUnit\Metadata\Version\Requirement;
 
 final class Achievement extends Model
 {
@@ -22,6 +24,7 @@ final class Achievement extends Model
     protected $casts = [
         'requirement_value' => 'decimal:2',
         'is_active' => 'boolean',
+        'requirement_type' => RequirementType::class,
     ];
 
     public function users(): BelongsToMany
