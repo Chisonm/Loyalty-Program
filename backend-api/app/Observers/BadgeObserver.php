@@ -19,8 +19,22 @@ final class BadgeObserver
     {
         try {
             $user->refresh();
-            $user->userStats?->total_purchases ?? 0;
+            $totalPurchases = $user->userStats?->total_purchases ?? 0;
+
+            Log::info('Badge check debug', [
+                'user_id' => $user->id,
+                'total_purchases' => $totalPurchases,
+                'current_badge_key' => $user->userStats?->current_badge_key,
+            ]);
+
             $earnedBadge = $this->badgeQueries->getCurrentBadge($user);
+
+            Log::info('Badge check result', [
+                'user_id' => $user->id,
+                'total_purchases' => $totalPurchases,
+                'earned_badge' => $earnedBadge?->key,
+                'earned_badge_requirement' => $earnedBadge?->requirement,
+            ]);
             if (! $earnedBadge) {
                 return null;
             }

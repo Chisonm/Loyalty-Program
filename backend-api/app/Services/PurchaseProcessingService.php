@@ -20,7 +20,6 @@ final class PurchaseProcessingService
             $purchase = $user->purchases()->create([
                 'amount' => $amount,
                 'status' => 'completed',
-                'payment_method' => 'credit_card',
                 'transaction_id' => 'trx-'.Str::uuid7(),
                 'description' => $description,
                 'processed_at' => now(),
