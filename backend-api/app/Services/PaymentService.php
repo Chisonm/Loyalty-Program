@@ -15,7 +15,7 @@ final class PaymentService
         $paymentData = [
             'id' => Str::uuid7(),
             'user_id' => $user->id,
-            'amount' => $amount,
+            'amount' => $amount / 100,
             'currency' => 'NGN',
             'reference' => ($type === 'cashback' ? 'cb-' : 'pay-').Str::uuid7(),
             'payment_method' => $type === 'cashback' ? 'cashback' : 'credit_card',

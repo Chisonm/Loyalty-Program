@@ -22,7 +22,7 @@ final class CheckoutController extends Controller
         ]);
 
         $user = auth('sanctum')->user();
-        $amount = (float) $amout['amount'] * 100;
+        $amount = (float) $amout['amount'];
         $this->paymentService->processPayment($user, $amount);
         $purchase = $this->purchaseProcessingService->processPurchase($user, $amount, 'product purchase');
 

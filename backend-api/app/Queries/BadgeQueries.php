@@ -11,8 +11,9 @@ final class BadgeQueries
 {
     public function getNextBadge(int $totalPurchases): ?Badge
     {
-        return Badge::where('requirement', '<=', $totalPurchases)
-            ->orderBy('requirement', 'desc')
+        return Badge::where('is_active', true)
+            ->where('requirement', '>', $totalPurchases)
+            ->orderBy('requirement', 'asc')
             ->first();
     }
 

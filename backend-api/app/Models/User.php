@@ -44,7 +44,7 @@ final class User extends Authenticatable
     {
         return $this->belongsToMany(Achievement::class, 'user_achievements')
             ->withTimestamps()
-            ->orderBy('user_achievements.created_at', 'desc');
+            ->orderBy('user_achievements.created_at', 'asc');
     }
 
     public function purchases(): HasMany
