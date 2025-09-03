@@ -60,6 +60,11 @@ final class User extends Authenticatable
             ->orderBy('user_badges.created_at', 'desc');
     }
 
+    public function userStats()
+    {
+        return $this->hasOne(UserStats::class);
+    }
+
     /**
      * Get the attributes that should be cast.
      *

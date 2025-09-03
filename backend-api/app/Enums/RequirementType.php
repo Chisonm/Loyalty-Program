@@ -11,7 +11,7 @@ enum RequirementType: string
 
     public function label(): string
     {
-        return match($this) {
+        return match ($this) {
             self::PURCHASES_COUNT => 'Number of Purchases',
             self::TOTAL_SPENT => 'Total Amount Spent',
         };

@@ -7,7 +7,6 @@ namespace App\Models;
 use App\Enums\RequirementType;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use PHPUnit\Metadata\Version\Requirement;
 
 final class Achievement extends Model
 {
@@ -31,5 +30,14 @@ final class Achievement extends Model
     {
         return $this->belongsToMany(User::class, 'user_achievements')
             ->withTimestamps();
+    }
+
+    public function checkRequirement(User $user): bool
+    {
+        return match ($this->requirement_type->value) {
+            'purchases_count' => ($user->userStats?->total_purchases ?? 0) >= $this->requirement_value,
+            'total_spent' => ($user->userStats?->total_spent ?? 0) >= $this->requirement_value,
+            default => false,
+        };
     }
 }
