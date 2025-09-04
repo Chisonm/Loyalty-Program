@@ -137,10 +137,19 @@ cd frontend
 ```bash
 npm install
 ```
+
+### 3. Environment Setup
+
+```bash
+# Copy environment file
+cp .env.example .env
+
+
 ### 3. Start the Development Server
 ```bash
 npm run dev
 ```
+
 ## Running the Application
 - Visit `http://localhost:5173` in your browser to access the frontend application.
 
