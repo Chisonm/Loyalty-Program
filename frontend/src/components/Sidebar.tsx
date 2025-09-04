@@ -36,13 +36,13 @@ const Sidebar: React.FC<SidebarProps> = ({
                     className={`flex items-center px-3 py-2 text-base font-semibold rounded-lg transition-colors ${
                       item.active
                         ? 'bg-primary-green-light text-primary-green border-l-4 border-primary-green'
-                        : 'text-gray-600 hover:bg-primary-green-light hover:text-primary-green'
+                        : 'text-secondary hover:bg-primary-green-light hover:text-primary-green'
                     }`}
                   >
                     {item.icon && (
                       <span className="mr-2">
                         <item.icon 
-                          className="size-5" 
+                          className="size-5 text-secondary" 
                           variant="Linear"
                         />
                       </span>
