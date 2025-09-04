@@ -12,7 +12,7 @@
 ### 1. Clone the Repository
 
 ```bash
-git clone <https://github.com/Chisonm/Loyalty-Program>
+git clone https://github.com/Chisonm/Loyalty-Program
 cd backend-api
 ```
 
@@ -92,10 +92,15 @@ php artisan test
 
 ### Authentication
 - `POST /api/login` - User login
+- body: { 
+    "email": "test@example.com", 
+    "password": "password" 
+}
 
 ### Users & Achievements
 - `GET /api/users/{user}/achievements` - Get user achievements and progress
-- `GET /api/user` - Get authenticated user (requires auth)
+- `GET /api/users` - Get all users
+- `PUT /api/users/{user}` - Update a user's progress
 
 ### Purchases
 - `POST /api/checkout` - Process a purchase (requires auth)
@@ -114,3 +119,33 @@ php artisan test
 - `PurchaseMade` - Fired when user completes purchase
 - `BadgeUnlocked` - Fired when user unlocks new badge
 - Background listeners update achievements and badges automatically
+
+
+# Frontend
+
+## Requirements
+- **Node.js**: ^21.7.3
+- **NPM**: ^8.19.2
+
+## Installation
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Chisonm/Loyalty-Program
+cd frontend
+```
+### 2. Install Dependencies
+```bash
+npm install
+```
+### 3. Start the Development Server
+```bash
+npm run dev
+```
+## Running the Application
+- Visit `http://localhost:5173` in your browser to access the frontend application.
+
+## Screenshots
+- Users
+![Users](/Screenshot%202025-2.png)
+- Achievements
+![Achievements](/Screenshot%202025-1.png)
