@@ -1,9 +1,21 @@
-<svg width="481" height="110" viewBox="0 0 481 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="392.001" cy="96.5478" r="91.3552" transform="rotate(-13.8409 392.001 96.5478)" stroke="#FEF0C7" stroke-width="1.92327"/>
-<circle cx="392.001" cy="96.5478" r="91.3552" transform="rotate(-13.8409 392.001 96.5478)" stroke="#FEF0C7" stroke-width="1.92327"/>
-<circle cx="392.001" cy="96.5462" r="137.514" transform="rotate(-13.8409 392.001 96.5462)" stroke="#FEF0C7" stroke-width="1.92327"/>
-<circle cx="392.001" cy="96.5486" r="183.672" transform="rotate(-13.8409 392.001 96.5486)" stroke="#FEF0C7" stroke-width="1.92327"/>
-<circle cx="392.001" cy="96.5471" r="229.83" transform="rotate(-13.8409 392.001 96.5471)" stroke="#FEF0C7" stroke-width="1.92327"/>
-<circle cx="392.001" cy="96.5495" r="275.989" transform="rotate(-13.8409 392.001 96.5495)" stroke="#FEF0C7" stroke-width="1.92327"/>
-<circle cx="392.001" cy="96.548" r="322.147" transform="rotate(-13.8409 392.001 96.548)" stroke="#FEF0C7" stroke-width="1.92327"/>
+<svg width="544" height="110" viewBox="0 0 544 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.17">
+<mask id="mask0_18965_65333" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="63" y="-295" width="784" height="783">
+<rect width="646.218" height="646.218" transform="translate(63.9778 -139.883) rotate(-13.8409)" fill="url(#paint0_radial_18965_65333)"/>
+</mask>
+<g mask="url(#mask0_18965_65333)">
+<circle cx="455.001" cy="96.5478" r="91.3552" transform="rotate(-13.8409 455.001 96.5478)" stroke="#CACACA" stroke-width="1.92327"/>
+<circle cx="455.001" cy="96.5478" r="91.3552" transform="rotate(-13.8409 455.001 96.5478)" stroke="#CACACA" stroke-width="1.92327"/>
+<circle cx="455.001" cy="96.5462" r="137.514" transform="rotate(-13.8409 455.001 96.5462)" stroke="#CACACA" stroke-width="1.92327"/>
+<circle cx="455.001" cy="96.5486" r="183.672" transform="rotate(-13.8409 455.001 96.5486)" stroke="#CACACA" stroke-width="1.92327"/>
+<circle cx="455.001" cy="96.5495" r="275.989" transform="rotate(-13.8409 455.001 96.5495)" stroke="#CACACA" stroke-width="1.92327"/>
+<circle cx="455.001" cy="96.548" r="322.147" transform="rotate(-13.8409 455.001 96.548)" stroke="#CACACA" stroke-width="1.92327"/>
+</g>
+</g>
+<defs>
+<radialGradient id="paint0_radial_18965_65333" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(323.109 323.109) rotate(90) scale(323.109 323.109)">
+<stop/>
+<stop offset="1" stop-opacity="0"/>
+</radialGradient>
+</defs>
 </svg>

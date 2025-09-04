@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import type { SidebarProps } from '../types'
 
 const Sidebar: React.FC<SidebarProps> = ({
@@ -31,9 +32,9 @@ const Sidebar: React.FC<SidebarProps> = ({
             <ul className="space-y-1 px-4 pb-4">
               {navItems.map((item) => (
                 <li key={item.id}>
-                  <a
-                    href={item.href}
-                    className={`flex items-center px-3 py-2 text-base font-semibold rounded-lg transition-colors ${
+                  <Link
+                    to={item.href}
+                    className={`w-full flex items-center px-3 py-2 text-base font-semibold rounded-lg transition-colors ${
                       item.active
                         ? 'bg-primary-green-light text-primary-green border-l-4 border-primary-green'
                         : 'text-secondary hover:bg-primary-green-light hover:text-primary-green'
@@ -48,7 +49,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                       </span>
                     )}
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -59,7 +60,7 @@ const Sidebar: React.FC<SidebarProps> = ({
       {/* Mobile overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 z-40 bg-black bg-opacity-50 lg:hidden"
+          className="fixed inset-0 z-40 lg:hidden"
           onClick={onToggle}
         />
       )}

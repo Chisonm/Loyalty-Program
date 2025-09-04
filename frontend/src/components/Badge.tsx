@@ -10,6 +10,8 @@ interface BadgeProps {
   backgroundColor?: string
   labelColor?: string
   className?: string
+  isActive?: boolean
+  isNext?: boolean
 }
 
 const Badge: React.FC<BadgeProps> = ({
@@ -19,7 +21,9 @@ const Badge: React.FC<BadgeProps> = ({
   iconColor = 'text-green-500',
   backgroundColor = 'bg-[#F8F8F8]',
   labelColor = 'text-[#344054]',
-  className = ''
+  className = '',
+  isActive = false,
+  isNext = false
 }) => {
   const sizeClasses = {
     sm: 'h-12 w-12',
@@ -33,13 +37,39 @@ const Badge: React.FC<BadgeProps> = ({
     lg: 'size-8'
   }
 
+  const getBadgeStyles = () => {
+    if (isActive) {
+      return {
+        backgroundColor: 'bg-primary-green',
+        iconColor: 'text-white',
+        labelColor: 'text-primary-green font-semibold'
+      }
+    }
+    if (isNext) {
+      return {
+        backgroundColor: 'bg-primary-green-light',
+        iconColor: 'text-primary-green',
+        labelColor: 'text-primary-green font-medium'
+      }
+    }
+    return {
+      backgroundColor,
+      iconColor,
+      labelColor
+    }
+  }
+
+  const styles = getBadgeStyles()
+
   return (
     <div className={`flex flex-col gap-2 items-center justify-center ${className}`}>
-      <div className={`flex items-center justify-center rounded-full ${sizeClasses[size]} ${backgroundColor}`}>
-        <Icon className={`${iconColor} ${iconSizeClasses[size]}`} />
+      <div className={`flex items-center justify-center rounded-full ${sizeClasses[size]} ${styles.backgroundColor} ${isActive ? 'ring-2 ring-primary-green ring-offset-2' : ''}`}>
+        <Icon className={`${styles.iconColor} ${iconSizeClasses[size]}`} />
       </div>
-      <span className={`${labelColor} text-sm font-medium text-center`}>
+      <span className={`${styles.labelColor} text-sm font-medium text-center`}>
         {label}
+        {isActive && <span className="block text-xs text-gray-500">Current</span>}
+        {isNext && <span className="block text-xs text-gray-500">Next</span>}
       </span>
     </div>
   )

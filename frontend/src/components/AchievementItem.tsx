@@ -30,7 +30,7 @@ const AchievementItem: React.FC<AchievementItemProps> = ({
     }
     
     const IconComponent = icon as ComponentType<IconsaxProps>
-    return <IconComponent className={`${iconColor} ${iconSize}`} variant="Bold" />
+    return <IconComponent className={`${iconColor} ${iconSize}`} variant="Linear" />
   }
 
   return (
