@@ -143,9 +143,9 @@ npm install
 ```bash
 # Copy environment file
 cp .env.example .env
+```
 
-
-### 3. Start the Development Server
+### 4. Start the Development Server
 ```bash
 npm run dev
 ```
