@@ -81,6 +81,13 @@ php artisan serve
 ./vendor/bin/pint
 ```
 
+### Run Tests
+
+```bash
+# Run test
+php artisan test
+```
+
 ## API Endpoints
 
 ### Authentication
