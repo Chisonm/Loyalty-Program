@@ -10,7 +10,6 @@ use App\Http\Resources\APIs\User\BadgeResource;
 use App\Models\User;
 use App\Services\UserStatsService;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 
 final class UserAchievementsController extends Controller
 {
