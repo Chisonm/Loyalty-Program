@@ -100,7 +100,7 @@ php artisan test
 ### Users & Achievements
 - `GET /api/users/{user}/achievements` - Get user achievements and progress
 - `GET /api/users` - Get all users
-- `PUT /api/users/{user}` - Update a user's progress
+- `GET /api/users/{user}` - GET a user by ID
 
 ### Purchases
 - `POST /api/checkout` - Process a purchase (requires auth)
